@@ -23,14 +23,12 @@ The datasets used in this study are publicly available:
 
 ## Getting Started
 ### Requirements
-- Python 3.8+
-- PyTorch >= 1.11
-- Torchvision >= 0.12
-- Other dependencies listed in `requirements.txt`
+- Python 3.11+
+- PyTorch >= 2.3.1
+- Torchvision >= 0.20
 
 ### Installation
 Clone the repository:
 ```bash
 git clone https://github.com/your-username/TerraSegNet.git
 cd TerraSegNet
-pip install -r requirements.txt

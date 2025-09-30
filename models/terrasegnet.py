@@ -179,7 +179,7 @@ class CAAM(nn.Module):
         return identity + out
 
 class FFM(nn.Module):
-    '''Feature Fusion Module (AFFM)'''
+    '''Feature Fusion Module (FFM)'''
     def __init__(self, channels: List[int], embedding_dim, dropout: float = 0.1):
         super(FFM, self).__init__()
 
@@ -253,20 +253,16 @@ class EAM(nn.Module):
             nn.Sigmoid()
         )
 
-        # Edge attention block (bias=False)
+        # Edge attention block
         self.edge_attention = nn.Sequential(
             nn.Conv2d(m_coarse_channels, m_coarse_channels, kernel_size=1, bias=False),
             nn.Sigmoid()
         )
 
     def forward(self, f_in, m_coarse):
-        # Initial feature projection
         x = self.initial_block(f_in)
-
-        # Separable convolution
         x = self.separable_conv(x)
 
-        # Spatial Attention
         avg_out = torch.mean(x, dim=1, keepdim=True)
         max_out, _ = torch.max(x, dim=1, keepdim=True)
         attention_map = torch.cat([avg_out, max_out], dim=1)
@@ -280,7 +276,7 @@ class EAM(nn.Module):
         # Edge attention map
         edge_attention_map = self.edge_attention(x)
 
-        # Upsample m_coarse with scale_factor (assumes fixed ratio)
+        # Upsample m_coarse with scale_factor
         m_coarse_upsampled = F.interpolate(m_coarse, scale_factor=2, mode='bilinear', align_corners=False)
 
         # Refined output
@@ -318,7 +314,7 @@ class TerraSegNet(nn.Module):
         super().__init__()
                
         self.backbone = EfficientNetBackbone(in_channels)
-        backbone_ch = [24, 48, 64, 160] # x2, x3, x4, x5
+        backbone_ch = [24, 48, 64, 160]
 
         self.spatial_path = SpatialPath(backbone_ch[1], dropout=dropout)
         self.context_path = ContextPath(backbone_ch[2], backbone_ch[3], dropout=dropout)
@@ -341,4 +337,5 @@ class TerraSegNet(nn.Module):
         seg_head = self.seg_head(enhanced_features)
         out = F.interpolate(seg_head, scale_factor=2, mode='bilinear', align_corners=False)
                
+
         return out

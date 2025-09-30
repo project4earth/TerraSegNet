@@ -19,7 +19,6 @@ class EfficientNetBackbone(nn.Module):
         else:
             self.stem = model.features[0]
 
-        # Ekstrak layer feature penting
         self.block1 = model.features[1]  
         self.block2 = model.features[2]
         self.block3 = model.features[3]
@@ -339,3 +338,4 @@ class TerraSegNet(nn.Module):
                
 
         return out
+

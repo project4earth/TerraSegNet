@@ -1,1 +1,6 @@
-
+The datasets used in this study are publicly available from the following sources:
+SPARCS dataset: https://emapr.ceoas.oregonstate.edu/sparcs/
+WHUS2-CD+ dataset: https://doi.org/10.5281/zenodo.5511792
+PV08 dataset: https://doi.org/10.5281/zenodo.5171711
+Plot-Rice v1.0 dataset: https://doi.org/10.5281/zenodo.13897215
+AIR-PolSAR-Seg-2.0 dataset: https://doi.org/10.57760/sciencedb.radars.00041

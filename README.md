@@ -1,12 +1,12 @@
 # TerraSegNet
 
 <p align="center">
-  <img src="./doc/TerraSegNet.png" alt="TerraSegNet Architecture" width="50%">
+  <img src="./doc/TerraSegNet.png" alt="TerraSegNet Architecture" width="60%">
 </p>
 
 
 ## Overview
-**TerraSegNet** is a novel semantic segmentation model designed for remote sensing applications.  
+**TerraSegNet** is a semantic segmentation model designed for remote sensing applications.  
 The architecture integrates convolutional neural networks with attention-based modules to effectively capture both spatial and contextual information from multi-source satellite imagery.  
 
 ## Features

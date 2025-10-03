@@ -1,6 +1,9 @@
 # TerraSegNet
 
-![TerraSegNet Architecture](./doc/TerraSegNet.png)
+<p align="center">
+  <img src="./doc/TerraSegNet.png" alt="TerraSegNet Architecture" width="50%">
+</p>
+
 
 ## Overview
 **TerraSegNet** is a novel semantic segmentation model designed for remote sensing applications.  

@@ -1,4 +1,4 @@
-# TerraSegNet
+# TerraSegNet: Bilateral Axial Attention Network for Remote Sensing Image Segmentation in Diverse Environmental Monitoring Applications
 
 <p align="center">
   <img src="./doc/TerraSegNet.png" alt="TerraSegNet Architecture" width="60%">

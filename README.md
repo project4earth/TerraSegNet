@@ -41,5 +41,5 @@ We provide pretrained weights for TerraSegNet models trained on multiple dataset
 ### Installation
 Clone the repository:
 ```bash
-git clone https://github.com/your-username/TerraSegNet.git
+git clone https://github.com/project4earth/TerraSegNet.git
 cd TerraSegNet

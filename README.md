@@ -43,3 +43,17 @@ Clone the repository:
 ```bash
 git clone https://github.com/project4earth/TerraSegNet.git
 cd TerraSegNet
+```
+
+### Citation
+If you use TerraSegNet in your research, please cite:
+```bash
+@ARTICLE{wijaya2025terrasegnet, 
+  author={Wijaya, Bagus Setyawan and Munir, Rinaldi and Utama, Nugraha Priya},
+  journal={IEEE Access}, 
+  title={TerraSegNet: Bilateral Axial Attention Network for Remote Sensing Image Segmentation in Diverse Environmental Monitoring Applications}, 
+  year={2025},
+  volume={13},
+  doi={10.1109/ACCESS.2025.3633712}
+}
+```
